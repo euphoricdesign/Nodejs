@@ -1,0 +1,30 @@
+METADATOS: Etiquetas META más habituales
+Las etiquetas de metadatos se deben añadir entre las etiquetas <head> </head> del código HTML. Estas etiquetas contienen la información
+que se muestra en las páginas de resultados de los diferentes buscadores en la que suelen publicarse 10 resultados que incluyen:
+
+Título (en azul en Google)
+Dirección de la página web (en verde en Google)
+Descripción (en negro en Google)
+Los metadatos html más habituales e importantes son:
+
+Title
+Es el contenido que se muestra entre las etiquetas <title> </title>. Los especialistas recomiendan no pasar de 65 caracteres aunque es
+preferible que sea inferior a 60 caracteres.
+
+Además, lo ideal es asignar un título a cada una de las páginas de tu sitio web en el que se incluyan las keywords básicas por las que se
+quiere posicionar cada página.
+
+Description
+Este metadato se muestra en la etiqueta <meta name=”description” content=”Aquí es donde se debe incluir la descripción” />
+
+Este contenido debe ser un resumen de lo que se incluye en la página web sin olvidar utilizar las keywords básicas elegidas. La recomendación 
+es que no supere los 160 caracteres. De esta información es de donde los buscadores extraen las 2 líneas de texto que muestran en los resultados 
+de las búsquedas.
+
+Keywords
+Este contenido aparece en la etiqueta <meta name=”keywords” content=”palabra clave 1, palabra clave 2, palabra clave 3, palabra clave n” />
+
+Aunque Google ya no tiene en cuenta esta etiqueta para sus resultados, otros buscadores siguen dándole bastante importancia. Se recomienda 
+utilizar de 6 a 10 keywords que no superen los 250 caracteres.
+
+https://www.opengeekservice.cl/sitio/es/blog/67-%C2%BFqu%C3%A9-son-y-para-qu%C3%A9-sirven-los-metadatos.html

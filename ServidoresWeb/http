@@ -1,0 +1,9 @@
+https://www.ionos.es/digitalguide/hosting/cuestiones-tecnicas/protocolo-http/
+
+Protocolo HTTPS
+
+HTTPS (HyperText Transfer Protocol Secure) es un protocolo que utiliza SSL (Secure Socket Layer) o en TLS (Transport Layer Security)
+para encapsular mensajes HTTP. Gracias a la utilización de algoritmos criptográficos y certificados digitales se puede garantizar 
+la confidencialidad y la integridad de la información transmitida, así como la autenticidad de los servidores.
+
+https://sites.google.com/site/sriasir20152016/servidor-web/protocolo-http-y-https?tmpl=%2Fsystem%2Fapp%2Ftemplates%2Fprint%2F&showPrintDialog=1

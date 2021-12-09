@@ -1,0 +1,58 @@
+Método GET:
+- Es el método más utilizado y se emplea para obtener cualquier tipo de información del servidor.
+- Se invoca cuando se introduce una URL en el navegador, cuando se pincha sobre un hiperenlace o cuando se envía un formulario GET.
+- Permite enviar parámetros al servidor en la URI (o URL) (conocidos como Query String)
+- Para codificar los parámetros como parte de la URI.
+    Se añaden a la URI detrás del nombre del recurso, separados de este por un caracter "?".
+    Los diferentes parámetros se separan entre sí por el carácter "&".
+    Los espacios se sustituyen por "+".
+    Los parámetros se incluyen a la línea inicial de petición.
+- Las peticiones GET no envían cuerpo de mensaje.
+- No se puede usar para subir archivos o realizar otras operaciones que requieran enviar una gran cantidad de datos al servidor.
+
+
+Método POST:
+- Se emplea para solicitar al servidor que acepte información que se adjunta en una petición.
+- Las peticiones POST envían el cuerpo del mensaje y en él se incluyen los parámetros y los datos que se consideren. Los parámetros no son visibles, por lo tanto, en la URL.
+- Se invoca normalmente como consecuencia de enviar un formulario HTML POST.
+- Se utiliza en operaciones que no deberían ser repetidas porque pueden tener efectos negativos. Los navegadores muestran mensajes de advertencia cuando se refresca una página con una petición POST.
+- No hay límite en la cantidad de datos que se pueden enviar. Se utiliza, por lo tanto, para enviar ficheros al servidor.
+- No es recomendable (y no se hace por defecto) cachear las respuestas obtenidas antes una petición POST.
+
+
+Método OPTIONS:
+- Para solicitar al servidor información sobre las opciones de comunicación disponibles de un recurso determinado.
+
+
+Método HEAD:
+- Para recuperar las cabeceras de una página web.
+- Similar a GET pero el servidor devuelve cabeceras.
+- Usado para implementar caches de navegadores, informar al usuario del tamaño del recurso antes de intentar recuperarlo, etc.
+
+
+Método PUT:
+- Para enviar recursos (subir) al servidor.
+- Por seguridad no es habitual que los servidores web permitan subir recursos usando el método PUT.
+
+
+Método DELETE
+- Para eliminar recursos del servidor.
+- Por seguridad no es habitual que los servidores web permitan subir recursos usando el método DELETE.
+
+
+Método TRACE:
+- Para trazar la ruta de una petición a través de proxies y cortafuegos.
+- Usado para depurar errores en redes complejas.
+ 
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+Módulo http
+Un módulo fundamental para implementar aplicaciones en un servidor web es el 'http'.
+'http' es un módulo del core de Node.js.
+
+
+const http=require('http');
+
+const servidor = http.createServer((pedido,respuesta) => {
+  respuesta.writeHead(200, {'Content-Type': 'text/html'});
+  respuesta.write(`<!doctype html><html><head></head>
+                   <body><h1>Sitio en desarrollo</h1></body></html>`);
+  respuesta.end();
+});
+
+servidor.listen(8888);                                                                         https://www.w3schools.com/nodejs/met_server_listen.asp
+
+console.log('Servidor web iniciado');
+
+
+El módulo 'http' tiene una función llamada createServer() que tiene por objetivo crear un servidor que implementa el protocolo HTTP.
+
+A la función createServer debemos enviarle una función anónima (o podemos implementar una función definida) con dos parámetros que los 
+hemos llamado pedido y respuesta.
+Los objetos pedido y respuesta los crea la misma función createServer y los pasa cuando se dispara el pedido de una página u otro recurso 
+al servidor.
+
+la función createServer se ejecuta en forma asíncrona lo que significa que no se detiene, sino que sigue con la ejecución de la 
+siguiente función.
+
+La función listen (escucha) que también es asíncrona se queda esperando a recibir peticiones.
+
+Antes que solicitemos una página desde el navegador podemos ver en la consola el mensaje de: 'Servidor web iniciado'.
+
+El programa como podemos ver desde la consola no ha finalizado sino que esta ejecutandose un ciclo infinito en la función listen 
+esperando peticiones de recursos.
+
+Dijimos que cuando hay una solicitud de recursos al servidor se dispara la función anónima llegando dos objetos como parámetro.
+
+El primer parámetro que lo iremos viendo a medida que avance el curso, contiene entre otros datos el nombre del archivo que solicitamos, 
+información del navegador que hace la petición etc. En nuestro programa actual al parámetro pedido no lo utilizamos
+
+Usamos el parámetro respuesta. Llamamos a los métodos:
+
+writeHead: es para indicar la cabecera de la petición HTTP (en esta caso indicamos con el código 200 que la petición fue Ok y con el segundo 
+parámetro inicializamos la propiedad Content-Type indicando que retornaremos una corriente de datos de tipo HTML.
+
+write: mediante la función write indicamos todos los datos del recurso a devolver al cliente (en este caso indicamos 
+en la cabecera de la petición que se trataba de HTML).
+Como el string a devolver son dos líneas lo más común es utilizar plantilla de cadenas de caracteres con las comillas invertidas `
+
+end: finalmente llamando a la función end finalizamos la corriente de datos del recurso (podemos llamar varias veces a la función write 
+previo a llamar por única vez a end).
+
+https://www.tutorialesprogramacionya.com/javascriptya/nodejsya/detalleconcepto.php?punto=5&codigo=5&inicio=0
+
+https://www.tutorialsteacher.com/nodejs/create-nodejs-web-server

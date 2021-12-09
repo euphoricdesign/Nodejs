@@ -13,7 +13,7 @@
 // app.listen()
 
 // listen() recibe dos cosas, un puerto y una función callback que nos va a avisar cuando el servidor este levantado.
-// El puerto es un valor númerico, vamos a decir que se levante en el puerto 3000 de nuestro computador. Vincula y escucha
+// El puerto es un valor númerico, vamos a decir que se levante en el puerto 3000 de nuestro computador. listen vincula y escucha
 // las conexiones en el host y el puerto especificados.
 
 // app.listen es efectivamente una función contenedora que llama a HTTP.createServer. createServer configura un detector
