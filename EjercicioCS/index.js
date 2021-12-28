@@ -209,7 +209,8 @@
 // argumentos indefinidos, puedes agregar los que tu quieras y a partir de ahí el va a crear un path. En este caso le agregamos __dirname y 
 // un nombre de archivo que es 'data.csv' que va a ser el archivo en el que nosotros queremos almacenar nuestros datos.
 
-// Esto nos imprime primero el path.join. Lo que hizo es juntar nuestra ruta de __dirname con lo que le vayamos agregando.
+// Esto nos imprime el path.join. Lo que hizo es juntar nuestra ruta de __dirname con lo que le vayamos agregando.
+
 // De esta forma podemos agregar rutas en nuestro sistema operativo desde node.
 
 // Ahora lo que vamos a hacer es generar nuestro archivo con file system (sistema de archivos).
@@ -226,35 +227,35 @@
 // modificación, borrado etc.
 
 
-const axios = require('axios');
-const fs = require('fs').promises;
-const path = require('path');
+// const axios = require('axios');
+// const fs = require('fs').promises;
+// const path = require('path');
 
-const main = async () => {
-  let res = await axios.get('https://rickandmortyapi.com/api/character')
-  let { data: {results} } =  res; 
-  let personajes = results.map(({id, name, status, species}) => {
-    return {
-      id,
-      name,
-      status,
-      species
-    }
-  })
+// const main = async () => {
+//   let res = await axios.get('https://rickandmortyapi.com/api/character')
+//   let { data: {results} } =  res; 
+//   let personajes = results.map(({id, name, status, species}) => {
+//     return {
+//       id,
+//       name,
+//       status,
+//       species
+//     }
+//   })
 
-  // join
-  let personajesString = personajes
-                        .map((personaje) => Object.values(personaje).join(','))
-                        .join('\n');
+//   // join
+//   let personajesString = personajes
+//                         .map((personaje) => Object.values(personaje).join(','))
+//                         .join('\n');
 
-  const cabeceras = Object.keys(personajes[0]).join(',');
+//   const cabeceras = Object.keys(personajes[0]).join(',');
 
-  const personajesConCabecera = cabeceras.concat('\n', personajesString)
+//   const personajesConCabecera = cabeceras.concat('\n', personajesString)
 
-  await fs.writeFile(path.join(__dirname, 'data.csv'), personajesConCabecera)
-}
+//   await fs.writeFile(path.join(__dirname, 'data.csv'), personajesConCabecera)
+// }
 
-main()
+// main()
 
 // Llamamos a la función writeFile a través de la constante fs. Esta función tiene dos parámetros: uno es el path en donde vas a escribir el archivo
 // incluyendo el nombre del archivo y el segundo parametro son los datos que vas a almacenar en ese archivo.
